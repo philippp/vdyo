@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>WebRTC working example</title>
+    <link rel="stylesheet" href="base.css">
 </head>
 <body>
+  <div>
     <video id="remoteStream" autoplay playsinline></video>
-    <script src="socket.io.js"></script>
-    <script src="main.js"></script>
+    <video id="localStream" autoplay playsinline></video>
+    <canvas id="localCanvas"></canvas>
+    <canvas class="remoteCanvas" id="remoteCanvas"></canvas>
+  </div>
+  <div id="controlBar">
+    Ballons: <button id="balloonButtonStart">start</button><button id="balloonButtonStop">stop</button>
+  </div>
+  <canvas id="remoteThumbnailCanvas"></canvas>
+  <script src="socket.io.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
